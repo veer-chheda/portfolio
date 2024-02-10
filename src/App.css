@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo Black:wght@400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+html{
+  overflow-x: hidden;
+}
 *,
 *::after,
 *::before {
@@ -7,6 +12,38 @@
   padding: 0;
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+}
+/* Existing styles */
+
+@media (max-width: 768px) {
+  .landing {
+    flex-direction: column-reverse;
+  }
+
+  .hello {
+    padding-left: none;
+    order: 1; /* Move the hello section below */
+    position: relative;
+    width: 100%; /* Occupy full width */
+    justify-self: center;
+    align-self: center;
+  }
+
+  .blob{
+    margin-top: 15vh;
+    margin-left: 10vw;
+    height: 50vh;
+  }
+
+  .veer2 {
+    position: static; /* Change to static positioning */
+    width: 100%;
+    transform: none;
+    font-size: 48px; /* Adjust font size as needed */
+    line-height: 1.5; /* Adjust line height as needed */
+    z-index: -1;
+    background-color: #000;
+  }
 }
 
 body {
@@ -17,32 +54,34 @@ body {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  background-color: #000;
 }
 
 .cover-2 {
-  background-color: #414141;
+  background-color: #a9a9a9;
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 
+
 .cover-3 {
-  background-color: #a9a9a9;
+  background-color: #414141;
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 
 .cover-4 {
-  background-color: #dfdfdf;
+  background-color: rgb(28, 28, 28);
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 .cover {
-  background-color: black;
+  background-color: #dfdfdf;
   position: absolute;
-  width: 100%;
+  width:  100vw;
   height: 100vh;
 }
 
@@ -57,20 +96,20 @@ body {
 }
 
 .cover h1 {
-  color: white;
+  color: rgb(8, 8, 8);
   font-size: 52px;
   font-weight: 900;
-  font-family: "Roboto", sans-serif;
+  font-family: "Archivo Black", sans-serif;
   display: inline-block; /* Ensure it's displayed inline */
 }
 
 .cover-heading .dot {
   top:20%;
-  color: white;
+  color: rgb(13, 13, 13);
   font-size: 52px;
   font-weight: 900;
   display: inline-block;
-  font-family: "Roboto", sans-serif;
+  font-family: "Karla", sans-serif;
 }
 
 
@@ -79,14 +118,60 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
+  width: 100vw;
+  --webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: blac;
   font-size: 72px;
   font-weight: 900;
   z-index: -1;
-  color: #2d2d2d;
-  font-family: "Roboto", sans-serif;
+  color: #e2e2e2;
+  font-family: "Archivo Black", sans-serif;
   letter-spacing: -4px;
   line-height: 1;
+  background-color: #000;
+}
+
+body, * {
+  cursor: none;
+}
+
+.landing{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.hello{
+  width: 70vw;
+}
+
+
+.cursor {
+  position: fixed;
+  background: #ffffff;
+  width: 10px;
+  height: 10px;
+  margin: -10px 0 0 -10px;
+  border-radius: 50%;
+  will-change: transform;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+
+.blob{
+  width: 100vw;
+}
+
+.about{
+  margin-top: 30vh;
+  width: 100vw;
+}
+
+.blobber{
+  margin-top: 15vh;
+  height: 60vh;
+  width: 45vw;
+  margin-left: 50vw;
 }

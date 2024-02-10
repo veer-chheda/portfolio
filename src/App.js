@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
 import './App.css';
 import gsap from 'gsap'
+import HiAnimation from './components/HiAnimation';
+import Spline from '@splinetool/react-spline';
+import About from './components/About';
 
 function App() {
 
@@ -101,7 +104,9 @@ function App() {
   })
 
   return (
+    <div>
     <div className="App">
+      <div className='cursor'></div>
           <div className="cover-4"></div>
           <div className="cover-3"></div>
           <div className="cover-2"></div>
@@ -110,10 +115,28 @@ function App() {
         <h1 className="veer">veer</h1>
         <h1 className="dot">.</h1>
       </div>
+      
+      <div className='veer2'>
+      
+      </div>
+      
+    </div>
+   
+    </div>
+    <div className='landing'>
+    <div className='hello'>< HiAnimation /></div>
+       <div className='blob'>
+    <div className='blobber'> <Spline scene="https://prod.spline.design/JUk2jjzKYp-j9zSy/scene.splinecode" /> </div>
+       <div className='about'><About/></div>
     </div>
 
-    <div className="veer2">veer chheda</div>
+</div>
+    
+
+
     </div>
+
+
   );
 }
 
